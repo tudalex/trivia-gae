@@ -1,0 +1,13 @@
+application: cloud-trivia
+version: 4
+runtime: python
+api_version: 1
+
+handlers:
+- url: /trivia/.*
+  script: trivia.py
+- url: /.*
+  script: trivia.py
+
+builtins:
+- datastore_admin: on
